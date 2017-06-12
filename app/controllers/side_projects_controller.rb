@@ -38,6 +38,10 @@ class SideProjectsController < ApplicationController
     @side_project.destroy
   end
 
+  def search
+    @results = SideProject.where("roomtype, side ILIKE ?", params[:query])
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_side_project
