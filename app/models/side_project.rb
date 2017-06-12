@@ -1,0 +1,2 @@
+class SideProject < ApplicationRecord
+end
