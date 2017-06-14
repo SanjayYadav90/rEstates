@@ -4,7 +4,7 @@ class SideProjectsController < ApplicationController
   # GET /side_projects
   def index
     # @side_projects = SideProject.all
-    @side_projects = SideProject.paginate(:page => params[:page], per_page: 2)
+    @side_projects = SideProject.paginate(:page => params[:page], per_page: 10)
 
     render json: @side_projects
     # paginate json: @side_projects
