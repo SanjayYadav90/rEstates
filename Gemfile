@@ -10,6 +10,8 @@ gem 'rails', '~> 5.0.3'
 gem 'mysql2', '>= 0.3.18', '< 0.5'
 gem 'puma', '~> 3.0'
 gem 'jsonapi-resources'
+gem 'will_paginate'
+gem 'api-pagination'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.5'
