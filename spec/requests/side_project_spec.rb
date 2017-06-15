@@ -51,7 +51,7 @@ RSpec.describe 'SideProjects API', type: :request do
 
   # Test suite for POST /side_project
   describe 'POST /side_projects' do
-    # valid payload
+
     let(:valid_attributes) { { Street: 'Learning Street', created_by: '1' } }
 
     context 'when the request is valid' do
@@ -67,7 +67,7 @@ RSpec.describe 'SideProjects API', type: :request do
     end
 
     context 'when the request is invalid' do
-      before { post '/side_projects', params: { Street: 'Don Street' } }
+      before { post '/side_projects', params: { Street: 'Walk Street' } }
 
       it 'returns status code 422' do
         expect(response).to have_http_status(422)
@@ -82,7 +82,7 @@ RSpec.describe 'SideProjects API', type: :request do
 
   # Test suite for PUT /sideProect/:id
   describe 'PUT /side_projects/:id' do
-    let(:valid_attributes) { { title: 'Shopping' } }
+    let(:valid_attributes) { { street: 'Shopping Mall' } }
 
     context 'when the record exists' do
       before { put "/side_projects/#{side_project_id}", params: valid_attributes }

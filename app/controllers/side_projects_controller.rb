@@ -50,7 +50,7 @@ class SideProjectsController < ApplicationController
       @side_project = SideProject.find(params[:id])
     end
 
-    # Only allow a trusted parameter "white list" through.
+    # Only allow a trusted parameter "white list" through strong parameter.
     def side_project_params
       params.require(:side_project).permit(:street, :city, :zip, :state, :beds, :baths, :sq__ft, :type, :sale_date, :price, :latitude, :longitude)
     end
