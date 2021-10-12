@@ -7,7 +7,7 @@ end
 
 gem 'rails', '~> 5.0.3'
 gem 'mysql2', '>= 0.3.18', '< 0.5'
-gem 'puma', '~> 3.0'
+gem 'puma', '~> 5.5'
 gem 'jsonapi-resources'
 gem 'will_paginate'
 gem 'api-pagination'
